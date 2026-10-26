@@ -3,6 +3,10 @@
   publish = "dist"
   functions = "netlify/functions"
 
+# PORT only configures the local Express dev server and is not a secret.
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "PORT"
+
 [[redirects]]
   from = "/api/contact"
   to = "/.netlify/functions/contact"
