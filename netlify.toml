@@ -3,6 +3,11 @@
   publish = "dist"
   functions = "netlify/functions"
 
+# PORT is only the local dev server port (see server/index.js and vite.config.js),
+# not a secret, so exclude it from secrets scanning.
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "PORT"
+
 [[redirects]]
   from = "/api/contact"
   to = "/.netlify/functions/contact"
