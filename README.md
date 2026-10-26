@@ -18,8 +18,11 @@ For production, run `npm run build` and deploy the project as a Node app with
 provider's secret settings. The server serves the built site and the contact
 API on the same port. Do not commit `.env`.
 
-The API validates submissions, limits each IP to five messages per 15 minutes,
-and includes a honeypot field to discourage automated spam.
+Both endpoints validate submissions and include a honeypot field to discourage
+automated spam. The local Express endpoint also limits each IP to five
+messages per 15 minutes. For production, add an external rate limiter or
+CAPTCHA if you start receiving spam; serverless function instances do not share
+in-memory rate-limit state.
 
 ### Netlify deployment
 
