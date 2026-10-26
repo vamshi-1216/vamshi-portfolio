@@ -3,7 +3,7 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Home", path: "/" },
+  { label: "Homee", path: "/" },
   { label: "About", path: "/about" },
   { label: "Education", path: "/education" },
   { label: "Skills", path: "/skills" },
