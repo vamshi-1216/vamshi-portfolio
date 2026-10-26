@@ -57,22 +57,22 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-[1440px] items-center justify-between rounded-2xl border border-violet/40 bg-violet px-4 py-3 shadow-2xl shadow-black/10 sm:px-6">
+      <nav className="mx-auto flex max-w-[1440px] items-center justify-between rounded-2xl border border-white/[0.08] bg-[#090b10] px-4 py-3 shadow-2xl shadow-black/10 sm:px-6">
         <Link
           to="/"
           onClick={closeMenu}
           className="group flex items-center gap-3"
           aria-label="Vamshi home"
         >
-          <span className="grid size-10 place-items-center rounded-xl border border-void/20 bg-void font-display text-xl font-bold text-violet transition group-hover:bg-void/80">
+          <span className="grid size-10 place-items-center rounded-xl border border-violet/30 bg-violet/10 font-display text-xl font-bold text-violet transition group-hover:bg-violet group-hover:text-void">
             V.
           </span>
 
           <span className="hidden sm:block">
-            <span className="block font-display text-sm font-semibold tracking-wide text-void">
+            <span className="block font-display text-sm font-semibold tracking-wide text-ink">
               Vamshi Bandari
             </span>
-            <span className="mt-0.5 block font-mono text-[10px] uppercase tracking-widest text-void/70">
+            <span className="mt-0.5 block font-mono text-[10px] uppercase tracking-widest text-smoke">
               Engineer / Artist
             </span>
           </span>
@@ -87,8 +87,8 @@ export default function Navbar() {
               className={({ isActive }) =>
                 `relative rounded-lg px-3 py-2 text-xs transition duration-200 xl:px-3.5 xl:text-sm ${
                   isActive
-                    ? "bg-void/15 text-void"
-                    : "text-void/75 hover:bg-void/10 hover:text-void"
+                    ? "bg-violet/10 text-violet"
+                    : "text-smoke hover:bg-white/[0.04] hover:text-ink"
                 }`
               }
             >
@@ -96,7 +96,7 @@ export default function Navbar() {
                 <>
                   {item.label}
                   {isActive && (
-                    <span className="absolute inset-x-3 -bottom-0.5 h-px bg-void" />
+                    <span className="absolute inset-x-3 -bottom-0.5 h-px bg-violet" />
                   )}
                 </>
               )}
@@ -106,7 +106,7 @@ export default function Navbar() {
 
         <Link
           to="/contact"
-          className="hidden items-center gap-2 rounded-full bg-void px-4 py-2.5 text-xs font-semibold text-violet transition hover:bg-void/80 hover:text-cyan xl:inline-flex"
+          className="hidden items-center gap-2 rounded-full bg-violet px-4 py-2.5 text-xs font-semibold text-void transition hover:bg-cyan xl:inline-flex"
         >
           Let's talk <ArrowUpRight size={15} />
         </Link>
@@ -114,7 +114,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
-          className="grid size-10 place-items-center rounded-xl border border-void/25 text-void transition hover:border-void lg:hidden"
+          className="grid size-10 place-items-center rounded-xl border border-line text-ink transition hover:border-violet lg:hidden"
           aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={menuOpen}
         >
