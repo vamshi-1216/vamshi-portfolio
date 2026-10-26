@@ -1,4 +1,11 @@
-import { ArrowUpRight, Palette, Code2, Brain, Sparkles } from "lucide-react";
+import {
+  ArrowUpRight,
+  Download,
+  Palette,
+  Code2,
+  Brain,
+  Sparkles,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const principles = [
@@ -125,11 +132,10 @@ export default function About() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
+              download="Vamshi-Bandari-Resume.pdf"
               className="inline-flex items-center gap-2 border border-line px-5 py-3 text-sm text-ink transition hover:border-violet/50 hover:text-violet"
             >
-              View resume <ArrowUpRight size={16} />
+              Download resume <Download size={16} />
             </a>
 
             <Link
